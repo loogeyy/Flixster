@@ -6,11 +6,11 @@
     android:layout_height="wrap_content">
 
     <ScrollView
-        android:layout_width="285dp"
-        android:layout_height="113dp"
+        android:layout_width="265dp"
+        android:layout_height="104dp"
         android:layout_below="@+id/tvTitle"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="-1dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:scrollbarStyle="insideInset">
 
@@ -20,7 +20,9 @@
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/white"
+            android:textSize="10sp"
             tools:text="Professor Albus Dumbledore knows the powerful, dark wizard Gellert Grindelwald is moving to seize control of the wizarding world. Unable to stop him alone, he entrusts magizoologist Newt Scamander to lead an intrepid team of wizards and witches. They soon encounter an array of old and new beasts as they clash with Grindelwald's growing legion of followers." />
 
     </ScrollView>
@@ -41,8 +43,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/white"
         android:textSize="24sp"
         tools:text="Fantastic Beasts: The Secrets of Dumbledore" />
 

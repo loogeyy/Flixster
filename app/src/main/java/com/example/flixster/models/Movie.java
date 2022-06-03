@@ -15,6 +15,7 @@ public class Movie {
     String posterPath;
     String backdropPath;
     Double voteAverage;
+    Integer id;
 
     public Movie() {}
 
@@ -24,6 +25,7 @@ public class Movie {
         overview = jsonObject.getString("overview");
         backdropPath = jsonObject.getString("backdrop_path");
         voteAverage = jsonObject.getDouble("vote_average");
+        id = jsonObject.getInt("id");
     }
 
     public static List<Movie> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
@@ -52,5 +54,9 @@ public class Movie {
 
     public Double getVoteAverage() {
         return voteAverage;
+    }
+
+    public String getIdPath() {
+        return String.format("https://api.themoviedb.org/3/movie/%s/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language-US", id);
     }
 }
