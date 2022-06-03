@@ -5,10 +5,11 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.135" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.135" />
-        <entry key="app/src/main/res/layout-land/item_movie.xml" value="0.367816162109375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_movie_details.xml" value="0.22655639648437503" />
-        <entry key="app/src/main/res/layout/item_movie.xml" value="0.334918212890625" />
+        <entry key="app/src/main/res/layout-land/item_movie.xml" value="0.429180908203125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.47584228515625004" />
+        <entry key="app/src/main/res/layout/activity_movie_details.xml" value="0.6644515991210938" />
+        <entry key="app/src/main/res/layout/activity_movie_trailer.xml" value="0.6203023274739583" />
+        <entry key="app/src/main/res/layout/item_movie.xml" value="0.10565110565110565" />
       </map>
     </option>
   </component>
