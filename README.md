@@ -30,7 +30,7 @@ The following **additional** features are implemented: List animation while scro
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/a/WiDubA9' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./demogif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/).
 
