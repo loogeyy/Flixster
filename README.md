@@ -30,7 +30,7 @@ The following **additional** features are implemented: List animation while scro
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./flixster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./flixsterdemo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/).
 
