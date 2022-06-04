@@ -29,28 +29,9 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_trailer);
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
+        videoKey = Parcels.unwrap(getIntent().getParcelableExtra("videoKey"));
+        Log.d("videoKey: ", videoKey);
 
-        String videoURL = movie.getIdPath();
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(videoURL, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Headers headers, JSON json) {
-                JSONObject jsonObject = json.jsonObject;
-                try {
-                    JSONArray results = jsonObject.getJSONArray("results");
-                    JSONObject object = results.getJSONObject(0);
-                    videoKey = object.optString("key");
-                    Log.d("idk", results.getString(0));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
-
-            }
-        });
 
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
 
@@ -58,13 +39,12 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-
                 youTubePlayer.cueVideo(videoKey);
             }
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-                Log.e("MovieTrailerActivity", "Error initializing Youtube player");
+                Log.e("MovieTrailerActivity", "Error initializing Youtube player: " + youTubeInitializationResult.toString());
             }
         });
     }

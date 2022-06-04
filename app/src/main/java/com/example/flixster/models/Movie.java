@@ -1,5 +1,7 @@
 package com.example.flixster.models;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,8 +57,11 @@ public class Movie {
     public Double getVoteAverage() {
         return voteAverage;
     }
-
+    public String getId() {
+        return Integer.toString(id);
+    }
     public String getIdPath() {
+        //Log.d("id of movie: ", String.valueOf(id));
         return String.format("https://api.themoviedb.org/3/movie/%s/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language-US", id);
     }
 }
